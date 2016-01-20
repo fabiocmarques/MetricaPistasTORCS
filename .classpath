@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry exported="true" kind="lib" path="/home/fabio/Documentos/UnB/PIBIC/xerces-2_11_0/xml-apis.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/fabio/Documentos/UnB/PIBIC/xerces-2_11_0/xercesImpl.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/fabio/Documentos/UnB/PIBIC/jdom-2.0.6/jdom-2.0.6.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/fabio/Documentos/UnB/PIBIC/jdom-2.0.6/jdom-2.0.6-contrib.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/fabio/Documentos/UnB/PIBIC/jdom-2.0.6/jdom-2.0.6-junit.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/fabio/Documentos/UnB/PIBIC/jdom-2.0.6/jdom-2.0.6-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/fabio/Documentos/UnB/PIBIC/jdom-2.0.6/jdom-2.0.6-javadoc.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/fabio/Documentos/UnB/PIBIC/xerces-2_11_0/resolver.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/fabio/Documentos/UnB/PIBIC/xerces-2_11_0/xercesSamples.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/fabio/Documentos/UnB/PIBIC/xerces-2_11_0/serializer.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
