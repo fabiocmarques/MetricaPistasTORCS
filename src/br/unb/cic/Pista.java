@@ -18,15 +18,10 @@ public class Pista {
 	 * @author fabio
 	 *
 	 */
-	public enum Estado{
-		EX_SEG, EX_COMP_RETA, EX_ARCO, EX_INIT_RADIUS, EX_END_RADIUS;
-	};
-	
-	protected static Estado estado;	
+
 	
 	public Pista(){
 		Segmentos = new ArrayList<Segmento>();
-		estado = Estado.EX_SEG;
 	}
 	
 	protected static Segmento getSegmento(int i){

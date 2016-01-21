@@ -23,7 +23,7 @@ public class testeSAX {
       SaxHandler handler = new SaxHandler();
 
       // finalmente vamos fazer o parsing do documento XML
-      parser.parse("XML/forza.xml", handler);
+      parser.parse("XML/corkscrew.xml", handler);
       // Caminho do arquivo que funciona: /home/fabio/Documentos/Eclipse/SAX/XML/forza.xml
     }
     catch(Exception ex){
@@ -45,7 +45,7 @@ public class testeSAX {
     	System.out.println(r.nome + " - Comprimento: " + r.getComprimento());
     
     if(c != null)
-    	System.out.println(c.nome + " - Init Radius: " + c.getInitRadius() + " - End Radius: " + c.getEndRadius());
+    	System.out.println(c.nome + " - Raio: " + c.getInitRadius());
     
     System.out.println("Comprimento da Pista: " + Estatisticas.getComprimentoTotal() + " m");
     System.out.println("Comprimento das Retas: " + Estatisticas.getComprimentoRetas() + " m");

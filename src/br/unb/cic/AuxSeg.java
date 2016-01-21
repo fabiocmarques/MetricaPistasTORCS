@@ -6,8 +6,7 @@ public class AuxSeg extends Segmento{
 	public double comprimento;
 	
 	public double arco;
-	public double initRadius;
-	public double endRadius;
+	public double radius;
 	public Lado lado;
 	
 	
@@ -19,6 +18,9 @@ public class AuxSeg extends Segmento{
 			Estatisticas.incrementaNumeroCurvas();
 			
 		Estatisticas.incrementaNumeroSegmentos();
+		
+		this.arco = -1;
+		this.radius = -1;
 	}
 	
 	public void setComprimento(double comprimento){
@@ -30,11 +32,7 @@ public class AuxSeg extends Segmento{
 	}
 	
 	public void setInitRadius(double radius){
-		this.initRadius = radius;
-	}
-	
-	public void setEndRadius(double radius){
-		this.endRadius = radius;
+		this.radius = radius;
 	}
 	
 	public void setLado(String lado){
