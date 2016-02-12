@@ -12,7 +12,7 @@
 <!--    the Free Software Foundation; either version 2 of the License, or     -->
 <!--    (at your option) any later version.                                   -->
 
-<!DOCTYPE params SYSTEM "../../../../src/libs/tgf/params.dtd" [
+<!DOCTYPE params SYSTEM "/home/fabio/Documentos/UnB/PIBIC/UnB-SCR-master/torcs-1.3.6/src/libs/tgf/params.dtd" [
 <!-- general definitions for tracks -->
 <!ENTITY default-surfaces SYSTEM "/home/fabio/Documentos/UnB/PIBIC/UnB-SCR-master/torcs-1.3.6/data/data/tracks/surfaces.xml">
 <!ENTITY default-objects SYSTEM "/home/fabio/Documentos/UnB/PIBIC/UnB-SCR-master/torcs-1.3.6/data/data/tracks/objects.xml">

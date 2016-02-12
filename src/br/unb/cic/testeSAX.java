@@ -23,7 +23,7 @@ public class testeSAX {
       SaxHandler handler = new SaxHandler();
 
       // finalmente vamos fazer o parsing do documento XML
-      parser.parse("XML/corkscrew.xml", handler);
+      parser.parse("XML/alpine-2.xml", handler);
       // Caminho do arquivo que funciona: /home/fabio/Documentos/Eclipse/SAX/XML/forza.xml
     }
     catch(Exception ex){
