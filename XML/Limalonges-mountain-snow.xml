@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE params SYSTEM "params.dtd" [
+<!DOCTYPE params SYSTEM "../../../../src/libs/tgf/params.dtd" [
 <!--  general definitions for tracks  -->
-<!ENTITY default-surfaces SYSTEM "surfaces.xml">
-<!ENTITY default-objects SYSTEM "objects.xml">
+<!ENTITY default-surfaces SYSTEM "../../../data/tracks/surfaces.xml">
+<!ENTITY default-objects SYSTEM "../../../data/tracks/objects.xml">
 ]>
 
 <params mode="mw" name="Test" type="param">
