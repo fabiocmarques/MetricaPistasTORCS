@@ -1,0 +1,38 @@
+Site Berniw (http://www.berniw.org/trb/tracks/tracklist.php):
+
+-> D-Speedway: Fácil, do tipo oval.
+-> Forza: Fácil-Médio, pista rápida e curvas suaves.
+-> Brondehach: Médio-Difícil, tecnicamente desafiadora.
+-> Alpine 1: Difícil, alta diversidade de segmentos e curvas.
+
+
+
+
+Teste com pistas do Artigo:
+
+D-Speedway: Considerada fácil, é do tipo oval.
+Wheel-2: Diversidade de curvas e velocidades, médio.
+Aalborg: Várias curvas fechadas, pista médio-difícil.
+Spring: Alta diversidade nos segmentos, muitas retas e curvas fechadas, difícil.
+
+
+Métrica 1: Comprimento das retas sobre o total.
+Métrica 2: Soma de raios vezes ângulos ponderada pelos raios.
+
+D-Speedway
+	M1: 0.17505822874333574
+	M2: 52.25806451612903
+
+Wheel-2
+	M1: 0.36752432559768466
+	M2: 22.771290944123315
+
+Aalborg
+	M1: 0.48308926268843233
+	M2: 33.08427027709391
+
+Spring
+	M1: 0.21457745223662253
+	M2: 32.89670775471993
+
+
