@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: relatorio.aux
+The style file: plain.bst
+Database file #1: bibliografia.bib
+Warning--to sort, need author or key in TORCS
+Warning--to sort, need author or key in JDOM
+Warning--empty journal in berniw
+Warning--empty year in berniw
+You've used 5 entries,
+            2118 wiz_defined-function locations,
+            524 strings with 4631 characters,
+and the built_in function-call counts, 1291 in all, are:
+= -- 123
+> -- 45
+< -- 0
++ -- 21
+- -- 14
+* -- 84
+:= -- 207
+add.period$ -- 15
+call.type$ -- 5
+change.case$ -- 22
+chr.to.int$ -- 0
+cite$ -- 9
+duplicate$ -- 46
+empty$ -- 119
+format.name$ -- 14
+if$ -- 274
+int.to.chr$ -- 0
+int.to.str$ -- 5
+missing$ -- 3
+newline$ -- 28
+num.names$ -- 6
+pop$ -- 35
+preamble$ -- 1
+purify$ -- 17
+quote$ -- 0
+skip$ -- 30
+stack$ -- 0
+substring$ -- 75
+swap$ -- 4
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 20
+warning$ -- 4
+while$ -- 8
+width$ -- 6
+write$ -- 51
+(There were 4 warnings)

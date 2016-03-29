@@ -10,9 +10,12 @@ public class Estatisticas {
 	protected static double comprimentoCurvas;
 	protected static double raiosTotais;
 	protected static double raioVezesAnguloTotal;
+	protected static double total1SobreRaio;
 	
 	protected static double metricaCompRetasSobreTotal;
 	protected static double metricaMediaPonderadaPorRaios;
+	protected static double metricaSomInvRaios;
+	protected static double metricaInvRaiosVezesNumCurvas;
 	
 	public Estatisticas(){
 		this.numeroSegmentos = 0;
@@ -23,11 +26,14 @@ public class Estatisticas {
 		this.comprimentoCurvas = 0.0;
 		this.raiosTotais = 0.0;
 		this.raioVezesAnguloTotal = 0.0;
+		this.total1SobreRaio = 0.0;
 	}
 	
 	public static void calculaEstatisticas(){
 		metricaCompRetasSobreTotal = comprimentoRetas/comprimentoTotal;
 		metricaMediaPonderadaPorRaios = raioVezesAnguloTotal/raiosTotais;
+		metricaSomInvRaios = total1SobreRaio;
+		metricaInvRaiosVezesNumCurvas = total1SobreRaio*numeroCurvas;
 		
 	}
 	
@@ -90,5 +96,21 @@ public class Estatisticas {
 	
 	protected static double getMetricaSomaPonderadaPorRaios(){
 		return Estatisticas.metricaMediaPonderadaPorRaios;
+	}
+
+	protected static void aumentaTotal1SobreRaio(double incremento){
+		Estatisticas.total1SobreRaio += incremento; 
+	}
+
+	protected static double getTotal1SobreRaio(){
+		return Estatisticas.total1SobreRaio;
+	}
+
+	protected static double getMetricaInvRaios(){
+		return Estatisticas.metricaSomInvRaios;
+	}
+
+	protected static double getMetricaInvRaiosXCurvas(){
+		return Estatisticas.metricaInvRaiosVezesNumCurvas;
 	}
 }

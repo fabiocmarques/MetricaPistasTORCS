@@ -63,22 +63,28 @@ public class SaxHandler extends DefaultHandler{
      if(qName.equals("attnum") && "arc".equals(attrs.getValue("name"))){
     	 Pista.aux.setArco(Double.parseDouble(attrs.getValue("val")) /* 3.14159 / 180*/);
     	 
-    	 if(Pista.aux.radius != -1)
-        	 Pista.Segmentos.add(new Curva(Pista.aux.nome, Pista.aux.arco, Pista.aux.radius, Pista.aux.lado, Segmento.Tipo.CURVA));
+    	 if(Pista.aux.radius != -1){
+            Estatisticas.aumentaRaiosTotais(Pista.aux.radius);
+            Estatisticas.aumentaRaioVezesAngulo(Pista.aux.radius * Pista.aux.arco);
+        	Pista.Segmentos.add(new Curva(Pista.aux.nome, Pista.aux.arco, Pista.aux.radius, Pista.aux.lado, Segmento.Tipo.CURVA));
+        }
   	 
      }
      
      
      // Aquisição do raio inicial da curva 
      if(qName.equals("attnum") && "radius".equals(attrs.getValue("name")) ){
-    	 Pista.aux.setInitRadius(Double.parseDouble(attrs.getValue("val")));
-    	 if("ft".equals(attrs.getValue("unit")))
-    		 Pista.aux.setInitRadius(Pista.aux.radius*0.3048);
-    	 Estatisticas.aumentaRaiosTotais(Pista.aux.radius);
-    	 Estatisticas.aumentaRaioVezesAngulo(Pista.aux.radius * Pista.aux.arco);
+    	Pista.aux.setInitRadius(Double.parseDouble(attrs.getValue("val")));
+    	if("ft".equals(attrs.getValue("unit")))
+    	   Pista.aux.setInitRadius(Pista.aux.radius*0.3048);
+        Estatisticas.aumentaTotal1SobreRaio(Pista.aux.radius);
     	 
-    	 if(Pista.aux.arco != -1)
-        	 Pista.Segmentos.add(new Curva(Pista.aux.nome, Pista.aux.arco, Pista.aux.radius, Pista.aux.lado, Segmento.Tipo.CURVA));  	 
+    	 
+    	if(Pista.aux.arco != -1){
+            Estatisticas.aumentaRaiosTotais(Pista.aux.radius);
+            Estatisticas.aumentaRaioVezesAngulo(Pista.aux.radius * Pista.aux.arco);
+            Pista.Segmentos.add(new Curva(Pista.aux.nome, Pista.aux.arco, Pista.aux.radius, Pista.aux.lado, Segmento.Tipo.CURVA));
+        } 	 
      }
      
   }

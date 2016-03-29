@@ -1,0 +1,31 @@
+\begin{thebibliography}{1}
+
+\bibitem{JDOM}
+J-{D}ocument {O}bjetc {M}odel.
+\newblock Online.
+\newblock Avaiable: http://www.jdom.org/index.html.
+
+\bibitem{TORCS}
+The {O}pen {R}acing {C}ar {S}imulator.
+\newblock Online.
+\newblock Avaiable: http://torcs.sourceforge.net/.
+
+\bibitem{trackgen}
+Luigi Cardamone, Pier~Luca Lanzi, and Daniele Loiacono.
+\newblock Trackgen: An interactive track generator for \{TORCS\} and
+  speed-dreams.
+\newblock {\em Applied Soft Computing}, 28:550 -- 558, 2015.
+
+\bibitem{automaticgen}
+D.~Loiacono, L.~Cardamone, and P.~L. Lanzi.
+\newblock Automatic track generation for high-end racing games using
+  evolutionary computation.
+\newblock {\em IEEE Transactions on Computational Intelligence and AI in
+  Games}, 3(3):245--259, Sept 2011.
+
+\bibitem{berniw}
+Bernhard Wymann.
+\newblock The torcs racing board.
+\newblock http://berniw.org/homepage/.
+
+\end{thebibliography}

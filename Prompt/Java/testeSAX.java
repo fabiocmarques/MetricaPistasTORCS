@@ -9,6 +9,13 @@ public class testeSAX {
 	
   public static void main(String[] args){
 	Pista pista = new Pista();
+  //A testar: D-Speedway, Forza, Brondehach, Alpine 1
+
+  //String nomePista = new String("XML/d-speedway.xml");
+  //String nomePista = new String("XML/forza.xml");
+  //String nomePista = new String("XML/brondehach.xml");
+  String nomePista = new String("XML/spring.xml");
+
 	Estatisticas est = new Estatisticas();
 	
     try {
@@ -23,8 +30,8 @@ public class testeSAX {
       SaxHandler handler = new SaxHandler();
 
       // finalmente vamos fazer o parsing do documento XML
-      parser.parse("XML/alpine-2.xml", handler);
-      // Caminho do arquivo que funciona: /home/fabio/Documentos/Eclipse/SAX/XML/forza.xml
+      parser.parse(nomePista, handler);
+      // Caminho do arquivo que funciona(exemplo): "XML/forza.xml"
     }
     catch(Exception ex){
       ex.printStackTrace(System.out);
@@ -41,16 +48,14 @@ public class testeSAX {
     else
     	c = (Curva)seg;
     
-    if(r != null)
-    	System.out.println(r.nome + " - Comprimento: " + r.getComprimento());
     
-    if(c != null)
-    	System.out.println(c.nome + " - Raio: " + c.getInitRadius());
-    
+    System.out.println("\n\n\n Nome da pista: " + nomePista + "\n");
     System.out.println("Comprimento da Pista: " + Estatisticas.getComprimentoTotal() + " m");
     System.out.println("Comprimento das Retas: " + Estatisticas.getComprimentoRetas() + " m");
     System.out.println("Metrica 'Comprimento das retas sobre o total': " + Estatisticas.getMetricaRetasSobreTotal());
     System.out.println("Metrica 'Soma de raios vezes angulos ponderada pelos raios': " + Estatisticas.getMetricaSomaPonderadaPorRaios());
+    System.out.println("Metrica 'Somatório dos inversos dos raios': " + Estatisticas.getMetricaInvRaios());
+    System.out.println("Metrica 'Somatório dos inversos dos raios vezes o número de curvas': " + Estatisticas.getMetricaInvRaiosXCurvas());
     	
     
     System.out.println("Deu certo!");

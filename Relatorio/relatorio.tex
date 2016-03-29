@@ -1,0 +1,51 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage{natbib}
+
+\textheight = 650pt
+\textwidth = 350pt
+\marginparwidth = 5pt
+
+\title{Esboço do Relatório}
+\author{Fábio Costa Farias Marques, 14/0039082}
+\date{28/03/2016}
+
+\begin{document}
+
+\maketitle
+\section{Introdução}
+	\begin{itemize}
+		\item \textbf{Parte inicial}: apresentação do problema e da proposta
+		\item \textbf{TORCS}\cite{TORCS}: apresentação e breve análise de algumas características do jogo;
+		\item \textbf{SCRC}: apresentação do campeonato e colocá-lo motivador do projeto, assim como descrever uma futura implementação para esta versão do TORCS.
+		\item \textbf{XML}: apresentação e explicação da extensão, assim como sua relação com o problema; 
+	\end{itemize}
+
+\section{Metodologia}
+	\begin{itemize}
+		\item \textbf{XML das pistas}: descrever o processo relacionado a elas, incluindo as modificações nos .xml de cada pista utilizada, arquivos adicionais necessários para a correta execução do programa;
+		\item \textbf{Leitura de XML}: descrição sucinta do programa e da configuração da ferramenta JDOM\cite{JDOM}, aprofundando no método de armazenamento das pistas e cálculo das estatísticas (imagens do algoritmo utilizado);
+		\item \textbf{Metrificação}: citar todas as métricas desenvolvidas, seguidas de suas motivações, fórmulas e explicações detalhadas acima de seus raciocínios, além de apresentar as pistas escolhidas como base para os testes e as demais utilizadas ao longo do projeto, citando algumas informações sobre elas assim como o motivo de suas escolhas e os artigos de referência os quais foram buscados por apoio \cite{automaticgen} \cite{trackgen}.
+	\end{itemize}
+\section{Resultados}
+	\begin{itemize}
+		\item Apresentação dos resultados para cada métrica em cada pista da base (4 iniciais \cite{berniw} tendo dificuldade definida pela comunidade);
+		\item Buscar uma relação entre a dificuldade definida pela comunidade e as métricas desenvolvidas, principalmente a busca por uma linearidade, um tipo de função monotônica que possa ser aplicada para uma fácil classificação;
+		\item Caso possível, definir dentro da métrica níveis de dificuldade das pistas 
+	\end{itemize}
+
+
+\section{Conclusão}
+	\begin{itemize}
+		\item[$\diamond$] Citar os desafios encontrados ao longo do desenvolvimento;
+		\item[$\diamond$] Resumo dos resultados;
+		\item[$\diamond$] Debate sobre os resultados, com objetivo de verificar a utilidade da métrica;
+		\item[$\diamond$] Análise do que pode ser melhorado no projeto: adição de uma rotina para adquirir e utilizar o campo ``end radius'' do arquivo .xml; implementação de uma variação para ser acoplado a um de piloto do SCRC, com o objetivo de analisar a pista dentro do jogo e metrifiá-la, possibilitando uma melhor seleção dos controles para cada prova. 
+	\end{itemize}
+
+
+\bibliography{bibliografia}{}
+\bibliographystyle{plain}
+\end{document}
