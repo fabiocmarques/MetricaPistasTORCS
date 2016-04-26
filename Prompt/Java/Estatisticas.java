@@ -16,6 +16,8 @@ public class Estatisticas {
 	protected static double metricaMediaPonderadaPorRaios;
 	protected static double metricaSomInvRaios;
 	protected static double metricaInvRaiosVezesNumCurvas;
+
+	protected static int metricaCurvasSeguidas;
 	
 	public Estatisticas(){
 		this.numeroSegmentos = 0;
@@ -27,6 +29,7 @@ public class Estatisticas {
 		this.raiosTotais = 0.0;
 		this.raioVezesAnguloTotal = 0.0;
 		this.total1SobreRaio = 0.0;
+		this.metricaCurvasSeguidas = 0;
 	}
 	
 	public static void calculaEstatisticas(){
@@ -34,6 +37,7 @@ public class Estatisticas {
 		metricaMediaPonderadaPorRaios = raioVezesAnguloTotal/raiosTotais;
 		metricaSomInvRaios = total1SobreRaio;
 		metricaInvRaiosVezesNumCurvas = total1SobreRaio*numeroCurvas;
+		metricaCurvasSeguidas = calcCurvasSeguidas();
 		
 	}
 	
@@ -113,4 +117,48 @@ public class Estatisticas {
 	protected static double getMetricaInvRaiosXCurvas(){
 		return Estatisticas.metricaInvRaiosVezesNumCurvas;
 	}
+
+	protected static int getMetricaCurvasSeguidas(){
+		return Estatisticas.metricaCurvasSeguidas;
+	}
+
+	protected static int calcCurvasSeguidas(){
+		int i, j = 0;
+		Segmento aux;
+
+		for(i = 0; i < Pista.Segmentos.size(); ++i){
+			aux = Pista.Segmentos.get(i);
+
+			if(i == Pista.Segmentos.size()-1){
+				if(aux.tipo == Segmento.Tipo.CURVA && ((Curva)aux).getLado() == Curva.Lado.DIREITA){
+					if( Pista.Segmentos.get(0).tipo == Segmento.Tipo.CURVA && ((Curva)Pista.Segmentos.get(0)).getLado() == Curva.Lado.ESQUERDA){
+						++j;
+					}
+				}
+				if(aux.tipo == Segmento.Tipo.CURVA && ((Curva)aux).getLado() == Curva.Lado.ESQUERDA){
+					if( Pista.Segmentos.get(0).tipo == Segmento.Tipo.CURVA && ((Curva)Pista.Segmentos.get(0)).getLado() == Curva.Lado.DIREITA)
+						++j;
+				}
+
+				continue;
+			}
+
+
+			if(aux.tipo == Segmento.Tipo.CURVA && ((Curva)aux).getLado() == Curva.Lado.DIREITA){
+				if( Pista.Segmentos.get(i+1).tipo == Segmento.Tipo.CURVA && ((Curva)Pista.Segmentos.get(i+1)).getLado() == Curva.Lado.ESQUERDA){
+					++j;
+				}					
+									
+			}
+			if(aux.tipo == Segmento.Tipo.CURVA && ((Curva)aux).getLado() == Curva.Lado.ESQUERDA){
+				if( Pista.Segmentos.get(i+1).tipo == Segmento.Tipo.CURVA && ((Curva)Pista.Segmentos.get(i+1)).getLado() == Curva.Lado.DIREITA){
+					++j;
+				}
+			}
+		}
+
+
+		return j;
+	}
 }
+
