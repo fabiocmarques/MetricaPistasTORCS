@@ -9,9 +9,8 @@ import org.xml.sax.helpers.DefaultHandler;
 
 public class SaxHandler extends DefaultHandler{
 	
-  @Override
-  public void startElement(String uri, String localName,
-     String qName, Attributes attrs) throws SAXException {
+
+  public void startElement(String str, String nome, String qName, Attributes attrs) throws SAXException {
 	  
 	  /**
 	   * Operações para retas
@@ -62,10 +61,11 @@ public class SaxHandler extends DefaultHandler{
      // Aquisição do arco da curva 
      if(qName.equals("attnum") && "arc".equals(attrs.getValue("name"))){
     	 Pista.aux.setArco(Double.parseDouble(attrs.getValue("val")) /* 3.14159 / 180*/);
+
     	 
     	 if(Pista.aux.radius != -1){
-            Estatisticas.aumentaRaiosTotais(Pista.aux.radius);
             Estatisticas.aumentaRaioVezesAngulo(Pista.aux.radius * Pista.aux.arco);
+            Estatisticas.aumentaAnguloTotal(Pista.aux.arco);
         	Pista.Segmentos.add(new Curva(Pista.aux.nome, Pista.aux.arco, Pista.aux.radius, Pista.aux.lado, Segmento.Tipo.CURVA));
         }
   	 
@@ -78,11 +78,12 @@ public class SaxHandler extends DefaultHandler{
     	if("ft".equals(attrs.getValue("unit")))
     	   Pista.aux.setInitRadius(Pista.aux.radius*0.3048);
         Estatisticas.aumentaTotal1SobreRaio(Pista.aux.radius);
+        Estatisticas.aumentaRaiosTotais(Pista.aux.radius);
     	 
     	 
     	if(Pista.aux.arco != -1){
-            Estatisticas.aumentaRaiosTotais(Pista.aux.radius);
             Estatisticas.aumentaRaioVezesAngulo(Pista.aux.radius * Pista.aux.arco);
+            Estatisticas.aumentaAnguloTotal(Pista.aux.arco);
             Pista.Segmentos.add(new Curva(Pista.aux.nome, Pista.aux.arco, Pista.aux.radius, Pista.aux.lado, Segmento.Tipo.CURVA));
         } 	 
      }

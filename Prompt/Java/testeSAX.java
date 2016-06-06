@@ -12,7 +12,7 @@ public class testeSAX {
   //A testar: D-Speedway, Forza, Brondehach, Alpine 1
 
   //String nomePista = new String("XML/d-speedway.xml");
-  //String nomePista = new String("XML/forza.xml");
+  String nomePista = new String("XML/forza.xml");
   //String nomePista = new String("XML/brondehach.xml");
   //String nomePista = new String("XML/alpine-1.xml");
 
@@ -26,7 +26,7 @@ public class testeSAX {
   //String nomePista = new String("XML/g-speedway.xml");
   //String nomePista = new String("XML/Limalonges-mountain-snow.xml");
   //String nomePista = new String("XML/spring.xml");
-  String nomePista = new String("XML/wheel-2.xml");
+  //String nomePista = new String("XML/wheel-2.xml");
 
 
 	Estatisticas est = new Estatisticas();
@@ -73,7 +73,12 @@ public class testeSAX {
     System.out.println("Metrica 'Somatório dos inversos dos raios': " + Estatisticas.getMetricaInvRaios());
     System.out.println("Metrica 'Somatório dos inversos dos raios vezes o número de curvas': " + Estatisticas.getMetricaInvRaiosXCurvas());
     System.out.println("Métrica 'Curvas seguidas': " + Estatisticas.getMetricaCurvasSeguidas());
-    	
+
+    System.out.println("Variancia dos comprimentos de retas: " + Estatisticas.getVarRetas());
+    System.out.println("Variancia dos comprimentos de curvas: " + Estatisticas.getVarCurvas());
+    System.out.println("Variancia dos angulos: " + Estatisticas.getVarAngulos());
+    System.out.println("Variancia dos raios: " + Estatisticas.getVarRaios() + " " + Estatisticas.getRaiosTotais());
+
     
     System.out.println("Deu certo!");
   }

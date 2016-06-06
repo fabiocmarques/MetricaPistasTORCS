@@ -1,0 +1,276 @@
+
+%% bare_jrnl.tex
+%% V1.4b
+%% 2015/08/26
+%% by Michael Shell
+%% see http://www.michaelshell.org/
+%% for current contact information.
+%%
+%% This is a skeleton file demonstrating the use of IEEEtran.cls
+%% (requires IEEEtran.cls version 1.8b or later) with an IEEE
+%% journal paper.
+%%
+%% Support sites:
+%% http://www.michaelshell.org/tex/ieeetran/
+%% http://www.ctan.org/pkg/ieeetran
+%% and
+%% http://www.ieee.org/
+
+%%*************************************************************************
+%% Legal Notice:
+%% This code is offered as-is without any warranty either expressed or
+%% implied; without even the implied warranty of MERCHANTABILITY or
+%% FITNESS FOR A PARTICULAR PURPOSE! 
+%% User assumes all risk.
+%% In no event shall the IEEE or any contributor to this code be liable for
+%% any damages or losses, including, but not limited to, incidental,
+%% consequential, or any other damages, resulting from the use or misuse
+%% of any information contained here.
+%%
+%% All comments are the opinions of their respective authors and are not
+%% necessarily endorsed by the IEEE.
+%%
+%% This work is distributed under the LaTeX Project Public License (LPPL)
+%% ( http://www.latex-project.org/ ) version 1.3, and may be freely used,
+%% distributed and modified. A copy of the LPPL, version 1.3, is included
+%% in the base LaTeX documentation of all distributions of LaTeX released
+%% 2003/12/01 or later.
+%% Retain all contribution notices and credits.
+%% ** Modified files should be clearly indicated as such, including  **
+%% ** renaming them and changing author support contact information. **
+%%*************************************************************************
+
+
+% *** Authors should verify (and, if needed, correct) their LaTeX system  ***
+% *** with the testflow diagnostic prior to trusting their LaTeX platform ***
+% *** with production work. The IEEE's font choices and paper sizes can   ***
+% *** trigger bugs that do not appear when using other class files.       ***                          ***
+% The testflow support page is at:
+% http://www.michaelshell.org/tex/testflow/
+
+
+
+\documentclass[journal]{IEEEtran}
+
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage{natbib}
+
+% *** GRAPHICS RELATED PACKAGES ***
+%
+%\ifCLASSINFOpdf
+  % \usepackage[pdftex]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../pdf/}{../jpeg/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+%\else
+ 
+%\fi
+
+
+
+\begin{document}
+%
+% paper title
+% Titles are generally capitalized except for words such as a, an, and, as,
+% at, but, by, for, in, nor, of, on, or, the, to and up, which are usually
+% not capitalized unless they are the first or last word of the title.
+% Linebreaks \\ can be used within to get better formatting as desired.
+% Do not put math or special symbols in the title.
+\title{Criação e análise de métricas para as pistas do TORCS}
+%
+%
+% author names and IEEE memberships
+% note positions of commas and nonbreaking spaces ( ~ ) LaTeX will not break
+% a structure at a ~ so this keeps an author's name from being broken across
+% two lines.
+% use \thanks{} to gain access to the first footnote area
+% a separate \thanks must be used for each paragraph as LaTeX2e's \thanks
+% was not built to handle multiple paragraphs
+%
+
+%\author{Fábio~Marques,~\IEEEmembership{Member,~IEEE,}}% <-this % stops a space
+%\thanks{}% <-this % stops a space
+
+\author{\IEEEauthorblockN{Fábio Marques}
+\IEEEauthorblockA{Departamento de Ciência da Computação\\
+Universidade de Brasília\\
+Brasília, Distrito Federal 30332--0250\\
+Email: fabio.cmarques@hotmail.com}}
+%\and
+%\IEEEauthorblockN{Homer Simpson}
+%\IEEEauthorblockA{Twentieth Century Fox\\
+%Springfield, USA\\
+%Email: homer@thesimpsons.com}
+%\and
+%\IEEEauthorblockN{James Kirk\\ and Montgomery Scott}
+%\IEEEauthorblockA{Starfleet Academy\\
+%San Francisco, California 96678--2391\\
+%Telephone: (800) 555--1212\\
+%Fax: (888) 555--1212}}
+
+
+% The paper headers
+\markboth{Journal of \LaTeX\ Class Files,~Vol.~14, No.~8, August~2015}%
+{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for IEEE Journals}
+
+
+% make the title area
+\maketitle
+
+% As a general rule, do not put math, special symbols or citations
+% in the abstract or keywords.
+\begin{abstract}
+The abstract goes here.
+\end{abstract}
+
+% Note that keywords are not normally used for peerreview papers.
+\begin{IEEEkeywords}
+TORCS, Métricas, SCR, XML.
+\end{IEEEkeywords}
+
+
+% For peer review papers, you can put extra information on the cover
+% page as needed:
+% \ifCLASSOPTIONpeerreview
+% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
+% \fi
+%
+% For peerreview papers, this IEEEtran command inserts a page break and
+% creates the second title. It will be ignored for other modes.
+\IEEEpeerreviewmaketitle
+
+
+
+\section{Introdução}
+
+\IEEEPARstart{A}{qui} ficará a introdução, que há de ser escrita, contendo: toda a parte inicial do artigo, apresentação do problema e da proposta, citando também os méritos do projeto, sendo elas:  aplicação na área de geração procedural de conteúdo, de modo a criar pistas de acordo com uma dificuldade pré-definida por uma métrica;
+% You must have at least 2 lines in the paragraph with the drop letter
+% (should never be an issue)
+
+
+% Colocam texto do lado direito da coluna
+\hfill mds
+ 
+\hfill August 26, 2015
+
+\subsection{TORCS}
+Apresentação do TORCS\cite{TORCS} e de algumas características do jogo;
+
+% needed in second column of first page if using \IEEEpubid
+%\IEEEpubidadjcol
+
+\subsubsection{SCRC}
+Apresentação do campeonato e colocá-lo motivador do projeto, assim como descrever uma futura implementação para esta versão do TORCS, seja para avaliação das pistas ou até mesmo de análise de desempenho dos pilotos;
+
+
+
+\section{Metodologia}
+
+\subsection{Pistas do TORCS}
+  As pistas do TORCS\cite{TORCS} têm suas estruturas básicas descritas em arquivos de extensão ``.xml'', inclusive os segmentos que dão formas a elas, informações sobre as quais este trabalho teve maior foco. As diferenças de superfície não foram consideradas, devido a um aumento considerável da complexidade do projeto, que deveria também analisar e metrificar a influência dos diferentes coeficientes de atrito possíveis, o que tem potencial para ser uma área de pesquisa, já que não existem bibliografias sobre tal assunto; fazendo com que a análise feita fosse aplicada somente a pistas dos tipos ``\textit{oval}'' e ``\textit{road}'', definidos de acordo com a seção de pistas em \cite{berniw}. 
+
+\subsection{Leitura de XML}
+  Uma ferramenta na linguagem \textit{Java}\cite{Java} foi desenvolvida para a leitura dos arquivos ``.xml'' das pistas, fazendo uso da API popularmente conhecida como \textit{SAX}\cite{SAX}, disponível em \cite{meuGit}. As pistas e cada um dos segmentos foram modelados como objetos, sendo que este foi estendido para seus dois tipos básicos: curvas, com seus atributos de nome, arco, raio e para qual lado ela leva, tendo como referência de posição seu início (esquerda ou direita); e as retas, sendo compostas somente por seu nome e comprimento. As pistas são compostas somente por um objeto auxiliar, usado na aquisição das informações do arquivo, e uma lista ordenada de seus segmentos, de acordo com sua disposição no ``.xml''. Devido à heterogeneidade das definições das curvas, nas quais não existe um padrão de utilização do campo ``\textit{end radius}'', tal campo não foi considerado devido à dificuldade de implementação, o que levou a diferenças entre o comprimento real total e das curvas e os calculados no programa.
+  \\
+  %\paragraph{}
+  A leitura de cada uma das informações é feita a partir da identifcação das marcações do arquivo. Como 9
+  \\
+  %\paragraph{}
+  Vale ressaltar que fora criada uma classe denominada ``Estatisticas'', a qual recebe informações da pista analisada durante toda a análise sintática (conhecida também pelo termo do inglês \textit{parsing}). Posteriormente à execução de todos os métodos do SAX, as seguintes informações estarão disponíveis: número de retas e curvas, comprimento total da pista, de todas as retas e de todas as curvas, somatório dos inversos dos ângulos de todas as curvas. Com tais dados armazenados nos objetos já citados, é possível gerar todas as métricas desenvolvidas somente executando um método.
+
+
+
+
+\section{Conclusão}
+  Citar os desafios encontrados ao longo do desenvolvimento;
+  \paragraph{Paragraph}
+  Resumo dos resultados;
+  \paragraph{Paragraph}
+  Debate sobre os resultados, com objetivo de verificar a utilidade da métrica;
+  \paragraph{Paragraph}
+  Análise do que pode ser melhorado no projeto: adição de uma rotina para adquirir e utilizar o campo ``end radius'' do arquivo .xml; implementação de uma variação para ser acoplado a um de piloto do SCRC, com o objetivo de analisar a pista dentro do jogo e metrifiá-la, possibilitando uma melhor seleção dos controles para cada prova, aprimoramento do método para aplicação em pistas do tipo \textit{``Dirt''}.
+
+
+
+
+
+% if have a single appendix:
+%\appendix[Proof of the Zonklar Equations]
+% or
+%\appendix  % for no appendix heading
+% do not use \section anymore after \appendix, only \section*
+% is possibly needed
+
+% use appendices with more than one appendix
+% then use \section to start each appendix
+% you must declare a \section before using any
+% \subsection or using \label (\appendices by itself
+% starts a section numbered zero.)
+%
+
+
+\appendices
+\section{Tabelas com informações das pistas}
+A tabela entra aqui.
+
+% you can choose not to have a title for an appendix
+% if you want by leaving the argument blank
+\section{Tabelas com as métricas das pistas}
+A outra tabela entra aqui
+
+
+% use section* for acknowledgment
+\section*{Reconhecimento}
+
+
+The authors would like to thank...
+
+
+% biography section
+% 
+% If you have an EPS/PDF photo (graphicx package needed) extra braces are
+% needed around the contents of the optional argument to biography to prevent
+% the LaTeX parser from getting confused when it sees the complicated
+% \includegraphics command within an optional argument. (You could create
+% your own custom macro containing the \includegraphics command to make things
+% simpler here.)
+%\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{mshell}}]{Michael Shell}
+% or if you just want to reserve a space for a photo:
+
+\begin{IEEEbiography}{Fábio Marques}
+Aluno da UnB.
+\end{IEEEbiography}
+
+% if you will not have a photo at all:
+\begin{IEEEbiographynophoto}{Fábio Marques}
+Aluno da UnB também.
+\end{IEEEbiographynophoto}
+
+% insert where needed to balance the two columns on the last page with
+% biographies
+%\newpage
+
+
+
+% You can push biographies down or up by placing
+% a \vfill before or after them. The appropriate
+% use of \vfill depends on what kind of text is
+% on the last page and whether or not the columns
+% are being equalized.
+
+%\vfill
+
+% Can be used to pull up biographies so that the bottom of the last one
+% is flush with the other column.
+%\enlargethispage{-5in}
+
+
+\bibliography{bibliografia}{}
+\bibliographystyle{plain}
+% that's all folks
+\end{document}
+
+

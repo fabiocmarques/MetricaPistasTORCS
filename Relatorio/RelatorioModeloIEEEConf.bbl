@@ -1,0 +1,28 @@
+\begin{thebibliography}{1}
+
+\bibitem{Java}
+Java.
+\newblock Online.
+\newblock Avaiable: https://www.java.com/pt\_BR/about/whatis\_java.jsp.
+
+\bibitem{meuGit}
+Metrica para pistas do torcs.
+\newblock Online.
+\newblock Avaiable: https://github.com/fabiocmarquesUnB/MetricaPistasTORCS/.
+
+\bibitem{TORCS}
+The {O}pen {R}acing {C}ar {S}imulator.
+\newblock Online.
+\newblock Avaiable: http://torcs.sourceforge.net/.
+
+\bibitem{SAX}
+{S}imple {API} for {XML}.
+\newblock Online.
+\newblock Avaiable: http://www.saxproject.org/.
+
+\bibitem{berniw}
+Bernhard Wymann.
+\newblock The torcs racing board.
+\newblock http://berniw.org/homepage/.
+
+\end{thebibliography}
