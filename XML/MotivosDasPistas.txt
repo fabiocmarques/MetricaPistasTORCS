@@ -1,4 +1,0 @@
-Alpine-2, Brondehach, C-Speedway, Dirt-1, Dirt-3, E-Speedway, G-Speedway, Limalonges-mountain-snow: utilizadas no SCRC de 2015.
-
-D-Speedway, Wheel-2, Aalborg, Spring: pistas de referência do artigo "Automatic Track Generation for High-End Racing
-Games Using Evolutionary Computation". 
