@@ -8,10 +8,10 @@ A utilização se dá em linha de comando com a versão presente na pasta "Promp
 
 Dois tipos de métricas foram desenvolvidas, ambas buscam relacionar as características estruturais da pista as naturais com pré-classificações de dificuldades encontradas na comunidade do TORCS, que se tratam de características estruturais das pistas, conseguidas com a leitura do arquivo XML, e as realacionais, desenvolvidas a partir de medidas estatísticas de dispersão aplicadas aos dados adquiridos e também tendo como base outras métricas presentes em artigos de referência.
 
-  Naturais: 
+  **Naturais:** 
     Comprimento da pista, Número de retas, Comprimento de retas, Número de curvas e Comprimento de curvas.
     
-  Relacionais:
+  **Relacionais:**
     Somatório dos inversos dos raios e variâncias de  comprimentos de reta, de curva, dos raios e dos ângulos das curvas.
 
 # Instruções de utilização
